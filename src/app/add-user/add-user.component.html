@@ -1,0 +1,63 @@
+
+
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+        <form class="contactForm"  #addForm=ngForm (ngSubmit)="registerUser()" >
+
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Sign up</h4>
+        <button type="button" class="close" data-dismiss="modal" mat-button  (click)="closeDialog()"  aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+
+          <div class="row">
+        <div class="md-form mb-5 col">
+          <input type="text" id="name" name="name" [(ngModel)]="user.nom" class="form-control" 
+                 mdbInput mdbValidate>
+          <label for="orangeForm-name">Nom</label>
+    
+        </div>
+        <div class="md-form mb-5 col">
+          <input type="email" id="lastname" name="lastname" [(ngModel)]="user.prenom" class="form-control" 
+                 mdbInput mdbValidate>
+          <label for="orangeForm-email">Prenom</label>
+     
+        </div>
+    </div>
+    <div class="row">
+    <div class="md-form mb-5 col">
+        <input type="text" id="username" name="username" [(ngModel)]="user.username"class="form-control" 
+               mdbInput mdbValidate>
+        <label for="orangeForm-name">Username</label>
+  
+      </div>
+      <div class="md-form mb-5 col">
+        <input type="email" id="phone" name="phone" [(ngModel)]="user.telephone" class="form-control" 
+               mdbInput mdbValidate>
+        <label for="orangeForm-email">Telephone</label>
+    
+      </div>
+  </div>
+
+  <div class="md-form mb-4 ">
+    <input type="email" id="email" name="email" [(ngModel)]="user.email"class="form-control" 
+           mdbInput mdbValidate>
+    <label for="orangeForm-email">Email</label>
+
+  </div>
+        <div class="md-form mb-4">
+          <input type="password" id="password" name="password" [(ngModel)]="user.password" class="form-control" 
+                 mdbInput mdbValidate>
+          <label for="orangeForm-pass">Mot de passe</label>
+      
+        </div>
+
+      </div>
+      <div class="modal-footer d-flex justify-content-center">
+        <button mdbBtn color="deep-orange" class="waves-light" mdbWavesEffect>Sign up</button>
+      </div>
+    </form>
+    </div>
+  </div>

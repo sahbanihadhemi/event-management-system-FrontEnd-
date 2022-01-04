@@ -1,0 +1,62 @@
+<section id="intro">
+    <div class="intro-container wow fadeIn" >
+    
+      <div class="container">
+        <br/>
+      <div class="row justify-content-center">
+                            <div class="col-12 col-md-10 col-lg-8">
+                              
+                            </div>
+                            <!--end of col-->
+                        </div>
+    </div>
+     
+    </div>
+  </section>
+  
+   <!--==========================
+        all event section
+      ============================-->
+      <section id="speakers" class="wow fadeInUp">
+        <div class="container"> 
+          <div class="section-header">
+          <ul class="nav">
+  <li class="nav-item">
+    <a class="nav-link active" (click)="myEvents()">Mes Evenements</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" (click)="participedInEvents()">Participedin</a>
+  </li>
+    </ul>       
+              </div>
+  
+          <div class="row" >
+            <div  class="col-lg-4 col-md-6" *ngFor="let e of events">
+              <div class="speaker">
+                <img src="assets/img/speakers/1.jpg" alt="Speaker 1" class="img-fluid">
+                <div class="details">
+                  <h3>{{e.nom}}</h3>
+
+                  <p>  
+                    <a routerLink="/eventpage/{{e.idEvents}}">Plus des détailes</a>              
+                    </p>
+  
+  
+                  <div class="social"> 
+                    <a href=""><i class="fa fa-twitter"></i></a>
+                    <a href=""><i class="fa fa-facebook"></i></a>
+                    <a href=""><i class="fa fa-google-plus"></i></a>
+                    <a href=""><i class="fa fa-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+           
+           
+            
+           
+          </div>
+        </div>
+  
+      </section>
+ 

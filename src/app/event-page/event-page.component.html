@@ -1,0 +1,320 @@
+
+  <!--==========================
+    Intro Section
+  ============================-->
+  <section id="intro">
+    <div class="intro-container wow fadeIn">
+     <!--  <h1 class="mb-4 pb-0">The Annual<br><span>Marketing</span> Conference</h1>
+      <p class="mb-4 pb-0">10-12 December, Downtown Conference Center, New York</p> -->
+      <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox play-btn mb-4" data-vbtype="video"
+        data-autoplay="true"></a>
+        <button type="button" class="about-btn scrollto" data-toggle="modal" data-target="#confirmModal">
+participer        </button>
+    </div>
+  </section>
+<!-- Button trigger modal -->
+<!-- SuccessModal -->
+<div  class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">2</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">Success</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Votre participation a reussi !
+        Nous vous envoyes un mail de confirmation
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+<!-- confirmModal -->
+<div class="modal fade" id="confirmModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">{{event.nom}}</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        </button>
+      </div>
+      <div class="modal-body">
+        <span aria-hidden="true">Merci de confirmer votre participation !!</span>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+
+        <button type="button" class="btn btn-primary"   (click)="participer(event)" > Confirmer</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+ <main id="main">
+
+    <!--==========================
+      About Section
+    ============================-->
+    <section id="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <h2>A propos l'evennemment</h2>
+            <p>{{event.about}}</p>
+          </div>
+          <div class="col-lg-3">
+            <h3>Lieu</h3>
+            <p>{{event.lieu}}</p>
+          </div>
+          <div class="col-lg-3"> 
+            <h3>Quand?</h3>
+            <p>{{event.dateDebutString}} <br>
+              <p>at : {{event.debut}}</p>
+              <p>to : {{event.fin}}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+              
+        
+
+    <!--==========================
+      Venue Section
+    ============================-->
+    <section id="venue" class="wow fadeInUp">
+
+      <div class="container-fluid">
+
+        <div class="section-header">
+          <h2>
+            LIEU DE L'ÉVÉNEMENT</h2>
+         
+          <p>Vous pouvez nous joindre sur <a href={{event.lien}}>ce lien Skype</a>
+            
+          </p>
+          <p>ou sur place</p>
+          <p>Galerie du lieu de l'événement</p>
+        </div>
+
+        <div class="row no-gutters">
+          <div class="col-lg-6 venue-map">
+            <app-map></app-map>
+                    </div>
+
+          <div class="col-lg-6 venue-info">
+            <div class="row justify-content-center">
+              <div class="col-11 col-lg-8">
+                <h3>{{event.lieu}}</h3>
+                 <p> {{event.descriptionLieu}}</p>         
+     </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="container-fluid venue-gallery-container">
+        <div class="row no-gutters">
+
+          <div class="col-lg-3 col-md-4">
+            <div class="venue-gallery">
+              <a href="assets/img/venue-gallery/1.jpg" class="venobox" data-gall="venue-gallery">
+                <img src="assets/img/venue-gallery/1.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+  <!--==========================
+      Hotels Section
+    ============================-->
+    </section>
+
+    <!--==========================
+      Hotels Section
+    ============================-->
+    <section id="hotels" class="section-with-bg wow fadeInUp">
+
+      <div class="container">
+        <div class="section-header">
+          <h2>Hôtels </h2>
+          <p>Hôtels à proximité</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6">
+            <div class="hotel">
+              <div class="hotel-img">
+                <img src="img/hotels/1.jpg" alt="Hotel 1" class="img-fluid">
+              </div>
+              <h3><a href="#">Hotel 1</a></h3>
+              <div class="stars">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+              <p>0.4 Mile from the Venue</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="hotel">
+              <div class="hotel-img">
+                <img src="img/hotels/2.jpg" alt="Hotel 2" class="img-fluid">
+              </div>
+              <h3><a href="#">Hotel 2</a></h3>
+              <div class="stars">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-half-full"></i>
+              </div>
+              <p>0.5 Mile from the Venue</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="hotel">
+              <div class="hotel-img">
+                <img src="img/hotels/3.jpg" alt="Hotel 3" class="img-fluid">
+              </div>
+              <h3><a href="#">Hotel 3</a></h3>
+              <div class="stars">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+              <p>0.6 Mile from the Venue</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+    <!--==========================
+      Gallery Section
+    ============================-->
+   
+
+    <!--==========================
+      Sponsors Section
+    ============================-->
+    <section id="sponsors" class="section-with-bg wow fadeInUp">
+
+      <div class="container">
+        <div class="section-header">
+          <h2>Les sponsors
+          </h2>
+        </div>
+
+        <div class="row no-gutters sponsors-wrap clearfix" >
+
+          <div *ngFor="let s of sponsor"  class="col-lg-3 col-md-4 col-xs-6"  >
+            <div class="sponsor-logo">
+              <img src={{s.img}}  class="img-fluid" alt="">
+            </div>
+          </div>
+     
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!--==========================
+      F.A.Q Section
+    ============================-->
+
+
+    <!--==========================
+      Buy Ticket Section
+    ============================-->
+  
+
+    <!--==========================
+      Contact Section
+    ============================-->
+    <section id="contact" class="section-bg wow fadeInUp">
+
+      <div class="container">
+
+        <div class="section-header">
+          <h2>Nous contacter
+          </h2>
+          <p>Si vous avez des questions, n'hésitez pas de nous contacter</p>
+        </div>
+
+        <div class="row contact-info">
+
+          <div class="col-md-4">
+            <div class="contact-address">
+              <i class="ion-ios-location-outline"></i>
+              <h3>Address</h3>
+              <address>A108 Adam Street, NY 535022, USA</address>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="contact-phone">
+              <i class="ion-ios-telephone-outline"></i>
+              <h3>Phone Number</h3>
+              <p><a href="tel:+155895548855">+1 5589 55488 55</a></p>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="contact-email">
+              <i class="ion-ios-email-outline"></i>
+              <h3>Email</h3>
+              <p><a href="mailto:info@example.com">info@example.com</a></p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="form">
+
+          <div id="sendmessage">Your message has been sent. Thank you!</div>
+          <div id="errormessage"></div>
+          <form class="contactForm"  #mailForm=ngForm (ngSubmit)="contactUs()" >
+           
+             
+              <div class="form-group">
+                <input type="email" class="form-control"  placeholder="Your Email" data-rule="email" name="email" [(ngModel)]="formEmail.fromEmail" data-msg="Please enter a valid email" />
+                <div class="validation"></div>
+              </div>
+           
+            <div class="form-group">
+              <input type="text" class="form-control"   placeholder="Subject" data-rule="minlen:4" name="subject" [(ngModel)]="formEmail.subject" data-msg="Please enter at least 8 chars of subject" />
+              <div class="validation"></div>
+            </div>
+            <div class="form-group">
+              <textarea class="form-control"  rows="5" data-rule="required" data-msg="Please write something for us"  name="message" [(ngModel)]="formEmail.body" placeholder="Message"></textarea>
+              <div class="validation"></div>
+            </div>
+            <div class="text-center"><button type="submit">Send Message</button></div>
+          </form>
+        </div>
+
+      </div>
+    </section><!-- #contact -->
+
+  </main>
+
